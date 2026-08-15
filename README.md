@@ -9,7 +9,6 @@ Bank Negara Malaysia licensed 5 digital banks in 2022, creating a new wave of Sh
 ```mermaid
 flowchart LR
     KIN[Kinesis] --> SPS[Snowpipe Streaming]
-    SP --> RAW[RAW Tables]
     SPS --> RAW
     RAW --> DT[Dynamic Tables]
     DT --> ML[ML Functions]
