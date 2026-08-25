@@ -113,7 +113,7 @@ Run all scripts including AWS integration. Deploy QuickSight dashboard from `qui
 ## Business Impact
 
 Industry research and Snowflake customer outcomes:
-- **BNM licensed 5 digital banks in 2022 targeting 9.6M unbanked/underserved Malaysians** — [Bank Negara Malaysia](https://www.bnm.gov.my/digital-banks)
+- **BNM licensed 5 digital banks in 2022 targeting 9.6M unbanked/underserved Malaysians** — [Bank Negara Malaysia](https://www.bnm.gov.my/financial-stability)
 - **Real-time fraud detection reduces financial crime losses by 50-70% vs batch processing** — [McKinsey Banking](https://www.mckinsey.com/industries/financial-services/our-insights)
 - **AI personalization in banking drives 20-30% improvement in product conversion rates** — [Accenture Banking](https://www.accenture.com/us-en/industries/banking)
 - **Malaysia's digital payment transactions reached 9.4 billion in 2023, growing 28% YoY** — [BNM Payment Statistics](https://www.bnm.gov.my/payment-statistics)
