@@ -1,6 +1,6 @@
 -- ============================================================================
 -- 09_AWS_INTEGRATION.SQL — AWS services for Digital Islamic Banking Intelligence
--- Account: 018437500440 | Region: ap-southeast-1
+-- Account: <YOUR_AWS_ACCOUNT_ID> | Region: ap-southeast-1
 -- Skip this script for Snowflake-only build
 -- ============================================================================
 USE DATABASE ISLAMIC_DIGITAL_BANKING;
@@ -72,11 +72,11 @@ CREATE OR REPLACE EXTERNAL ACCESS INTEGRATION aws_malaysia_islamic_finance_digit
   ENABLED = TRUE
   COMMENT = 'SNS access for Digital Islamic Banking Intelligence alerts';
 
--- SNS Topic ARN: arn:aws:sns:ap-southeast-1:018437500440:sea-demos-aws-malaysia-islamic-finance-digital
+-- SNS Topic ARN: arn:aws:sns:ap-southeast-1:<YOUR_AWS_ACCOUNT_ID>:sea-demos-aws-malaysia-islamic-finance-digital
 
 -- ==================== KINESIS / IOT CORE INGESTION ====================
 -- Snowpipe from Kinesis Data Stream
--- Stream ARN: arn:aws:kinesis:ap-southeast-1:018437500440:stream/aws-malaysia-islamic-finance-digital-stream
+-- Stream ARN: arn:aws:kinesis:ap-southeast-1:<YOUR_AWS_ACCOUNT_ID>:stream/aws-malaysia-islamic-finance-digital-stream
 
 CREATE OR REPLACE PIPE RAW.REALTIME_PIPE
   AUTO_INGEST = TRUE
