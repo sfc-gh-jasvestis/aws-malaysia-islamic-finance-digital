@@ -117,7 +117,7 @@ Industry research and Snowflake customer outcomes:
 - **Real-time fraud detection reduces financial crime losses by 50-70% vs batch processing** — [McKinsey Banking](https://www.mckinsey.com/industries/financial-services/our-insights)
 - **AI personalization in banking drives 20-30% improvement in product conversion rates** — [Accenture Banking](https://www.accenture.com/us-en/industries/banking)
 - **Malaysia's digital payment transactions reached 9.4 billion in 2023, growing 28% YoY** — [BNM Payment Statistics](https://www.bnm.gov.my/payment-statistics)
-
+- **Western Union** (Snowflake customer): processes 1B+ cross-border transactions on Snowflake with real-time compliance monitoring across 200+ countries -- [snowflake.com/customers/western-union](https://www.snowflake.com/en/customers/all-customers/case-study/western-union/)
 
 ## Key Demo Numbers
 
