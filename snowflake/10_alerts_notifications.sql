@@ -8,7 +8,7 @@ USE SCHEMA APP;
 CREATE OR REPLACE NOTIFICATION INTEGRATION aws_malaysia_islamic_finance_digital_EMAIL_INT
   TYPE = EMAIL
   ENABLED = TRUE
-  ALLOWED_RECIPIENTS = ('jonathan.asvestis@snowflake.com');
+  ALLOWED_RECIPIENTS = ('<YOUR_EMAIL>');
 
 -- Alert: SUSPICIOUS_TRANSACTION_ALERT
 CREATE OR REPLACE ALERT APP.SUSPICIOUS_TRANSACTION_ALERT
@@ -22,7 +22,7 @@ IF (EXISTS (
 THEN
   CALL SYSTEM$SEND_EMAIL(
     'aws_malaysia_islamic_finance_digital_EMAIL_INT',
-    'jonathan.asvestis@snowflake.com',
+    '<YOUR_EMAIL>',
     '[ALERT] Digital Islamic Banking Intelligence: Suspicious high-value transaction detected',
     'Suspicious high-value transaction detected'
   );
@@ -41,7 +41,7 @@ IF (EXISTS (
 THEN
   CALL SYSTEM$SEND_EMAIL(
     'aws_malaysia_islamic_finance_digital_EMAIL_INT',
-    'jonathan.asvestis@snowflake.com',
+    '<YOUR_EMAIL>',
     '[ALERT] Digital Islamic Banking Intelligence: Account velocity anomaly — potential account takeover',
     'Account velocity anomaly — potential account takeover'
   );
