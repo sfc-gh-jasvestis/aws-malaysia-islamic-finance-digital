@@ -35,33 +35,33 @@ export default function HomePage() {
   const executiveCockpit = (
     <div className="space-y-6">
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <KPICard title="Total AUM" value="RM 2.4B" status="neutral" />
-        <KPICard title="Compliance" value="7" status="warning" />
-        <KPICard title="Anomalies Detected" value="3" status="danger" />
-        <KPICard title="Active Products" value="124" status="neutral" />
+        <KPICard title="Digital Islamic AUM" value="RM 12.4B" status="neutral" />
+        <KPICard title="Active Users" value="1.8M" status="neutral" />
+        <KPICard title="Shariah Compliance" value="100%" status="neutral" />
+        <KPICard title="Products" value="14" status="neutral" />
       </div>
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <Chart
           data={data?.timeseries || [{ period: 'Loading', value: 0 }]}
           type="line"
           xKey="period"
-          yKeys={[{ key: 'value', name: 'AUM' }]}
-          title="AUM Trend (Weekly)"
+          yKeys={[{ key: 'value', name: 'Users (K)' }]}
+          title="Digital Islamic Product Growth"
         />
         <Chart
           data={data?.categories || [{ category: 'Loading', count: 0 }]}
           type="bar"
           xKey="category"
-          yKeys={[{ key: 'count', name: 'Count' }]}
-          title="Compliance by Product"
+          yKeys={[{ key: 'count', name: 'RM B' }]}
+          title="AUM by Product Type"
         />
       </div>
       <DataTable
         columns={[
           { key: 'id', header: '#' },
           { key: 'name', header: 'Product' },
-          { key: 'status', header: 'Status' },
-          { key: 'value', header: 'AUM' },
+          { key: 'status', header: 'Compliance' },
+          { key: 'value', header: 'AUM (RM M)' },
         ]}
         data={data?.entities || []}
         title="Product Performance"
@@ -72,16 +72,16 @@ export default function HomePage() {
   const domainTab1 = (
     <div className="space-y-6">
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-        <KPICard title="Efficiency" value="87%" />
-        <KPICard title="Utilization" value="72%" />
-        <KPICard title="Growth Rate" value="+8.4%" />
+        <KPICard title="App DAU" value="420K" />
+        <KPICard title="Conversion" value="18%" />
+        <KPICard title="Avg Investment" value="RM 8.4K" />
       </div>
       <Chart
         data={data?.detail || [{ x: 'Loading', y: 0 }]}
         type="area"
         xKey="x"
-        yKeys={[{ key: 'y', name: 'Index' }]}
-        title="Finance Digital Performance Trend"
+        yKeys={[{ key: 'y', name: 'Users' }]}
+        title="User Acquisition by Channel"
         height={400}
       />
     </div>
@@ -95,16 +95,16 @@ export default function HomePage() {
           type="pie"
           xKey="label"
           yKeys={[{ key: 'value', name: 'Score' }]}
-          title="Risk Distribution"
+          title="Compliance Audit Score"
         />
         <ActionMemo
-          persona={{ name: 'Malaysia Operations Lead', role: 'Director of Finance Digital' }}
+          persona={{ name: 'Dr. Asyraf Wajdi Dusuki', role: 'Shariah Advisory Board Chair' }}
           context={{}}
           onGenerate={async () => ({
             subject: 'Action Required',
             body: 'AI-generated recommendation based on current data patterns and predicted trends.',
             urgency: 'HIGH',
-            actions: ['Review top compliance findings', 'Optimize product allocation', 'Prepare quarterly finance digital report'],
+            actions: ['Review new robo-advisory algorithm for Shariah compliance', 'Certify new ESG-Islamic hybrid fund with SAC', 'Launch Shariah-compliant P2P financing feature'],
           })}
         />
       </div>
@@ -116,9 +116,9 @@ export default function HomePage() {
       <AskAI
         title="Ask AI"
         sampleQuestions={[
-          'Which products have the highest compliance?',
-          'Show aum trend for the last 30 days',
-          'What is the forecast for next quarter's aum?',
+          'Which digital products have highest user growth?',
+          'Show Shariah compliance audit results',
+          'What is the optimal product mix for millennial segment?',
         ]}
         mode="both"
         onSubmit={async (question, mode) => {
@@ -178,8 +178,8 @@ export default function HomePage() {
 
   const tabs = [
     { id: 'executive-cockpit', label: 'Executive Cockpit', icon: '📊', content: executiveCockpit },
-    { id: 'domain-1', label: 'Finance Digital Analytics', icon: '📈', content: domainTab1 },
-    { id: 'domain-2', label: 'Alerts & Actions', icon: '⚡', content: domainTab2 },
+    { id: 'domain-1', label: 'User Analytics', icon: '📈', content: domainTab1 },
+    { id: 'domain-2', label: 'Shariah Governance', icon: '⚡', content: domainTab2 },
     { id: 'ask-ai', label: 'Ask AI', icon: '🤖', content: askAiTab },
     { id: 'architecture', label: 'Architecture & Data', icon: '🏗️', content: architectureTab },
   ];
