@@ -53,6 +53,7 @@ export default function HomePage() {
         <div className="lg:col-span-1">
           <GeoMap
             country="malaysia"
+            labels={{ entity: 'Products', event: 'Transactions', alert: 'Flagged Txns' }}
             regions={data?.regions}
             markers={[{"label": "Kuala Lumpur", "value": "Islamic finance hub", "color": "blue", "size": "lg"}, {"label": "Penang", "value": "Regional branch", "color": "green", "size": "md"}, {"label": "Johor Bahru", "value": "Southern ops", "color": "green", "size": "md"}, {"label": "Kota Kinabalu", "value": "E.Malaysia branch", "color": "green", "size": "sm"}]}
             routes={[]}
@@ -83,8 +84,13 @@ export default function HomePage() {
         columns={[
           { key: 'id', header: '#' },
           { key: 'name', header: 'Product' },
+          { key: 'region', header: 'Region' },
           { key: 'status', header: 'Compliance' },
-          { key: 'value', header: 'AUM (RM M)' },
+          { key: 'm1', header: 'AUM (RM M)' },
+          { key: 'm2', header: 'Conversion' },
+          { key: 'm3', header: 'Investment' },
+          { key: 'events', header: 'Transactions' },
+          { key: 'alerts', header: 'Flagged Txns' },
         ]}
         data={data?.entities || []}
         title="Product Performance"
